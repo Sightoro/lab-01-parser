@@ -1,8 +1,26 @@
-// Copyright 2021 Your Name <your_email>
+// Copyright 2021 Lonskiy Yuriy yuralon.skiy@mail.ru
 
-#ifndef INCLUDE_EXAMPLE_HPP_
-#define INCLUDE_EXAMPLE_HPP_
+#ifndef INCLUDE_STUDENTS_HPP_
+#define INCLUDE_STUDENTS_HPP_
+#include <iostream>
+#include <fstream>
+#include <any>
+#include <stdexcept>
+#include <iomanip>
+#include <nlohmann/json.hpp>
+using nlohmann::json;
 
-//auto example() -> void;
+struct Student {
+  std::string name;
+  std::any group;
+  std::any avg;
+  std::any debt;
+};
 
-#endif // INCLUDE_EXAMPLE_HPP_
+std::vector<Student> parse_file(json &data);
+json get_data(const std::string &jsonPath);
+void from_json(const json& j, Student& s);
+void print();
+void print(const Student& student, std::ostream& os);
+void print(std::vector<Student>& students, std::ostream& os);
+#endif // INCLUDE_STUDENTS_HPP_

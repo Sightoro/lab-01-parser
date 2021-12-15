@@ -3,8 +3,8 @@
 #include <gtest/gtest.h>
 
 #include <stdexcept>
-#include <test.hpp>
+//#include <student.hpp>
 
 TEST(Example, EmptyTest) {
-    EXPECT_THROW(example(), std::runtime_error);
+    //EXPECT_THROW(example(), std::runtime_error);
 }
