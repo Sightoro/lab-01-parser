@@ -67,9 +67,12 @@ std::vector<Student> parse_file(json &data){
 }
 
 void print(){
-  std::cout << "|" << " name" << std::setfill(' ') << std::setw(20) << "|" << " group" << std::setw(4)
-            << "|" << " avg" << std::setw(6) << "|" << " debt" << std::setw(5) << "|" << std::endl
-            << "|" << std::setfill('-') << std::setw(25) << "|" << std::setw(10)
+  std::cout << "|" << " name" << std::setfill(' ') << std::setw(20)
+            << "|" << " group" << std::setw(4)
+            << "|" << " avg" << std::setw(6) << "|" << " debt"
+            << std::setw(5) << "|" << std::endl
+            << "|" << std::setfill('-') << std::setw(25)
+            << "|" << std::setw(10)
             << "|" << std::setw(10) << "|" << std::setw(10) << "|" << std::endl;
 }
 
@@ -102,7 +105,8 @@ void print(const Student& student, std::ostream& os){
        << std::setw(8) << std::left
        << " items" << std::right << "|" << std::endl;
 
-  os << std::right << "|" << std::setfill('-') << std::setw(25) << "|" << std::setw(10)
+  os << std::right << "|" << std::setfill('-')
+     << std::setw(25) << "|" << std::setw(10)
      << "|" << std::setw(10) << "|" << std::setw(10) << "|" << std::endl;
 }
 void print(std::vector<Student> &students, std::ostream &os) {

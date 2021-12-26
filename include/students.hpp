@@ -8,6 +8,8 @@
 #include <stdexcept>
 #include <iomanip>
 #include <nlohmann/json.hpp>
+#include <string>
+#include <vector>
 using nlohmann::json;
 
 struct Student {
